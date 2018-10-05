@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM resin/rpi-raspbian:stretch
 
 RUN set -ex \
     # Official Mopidy install for Debian/Ubuntu along with some extensions
@@ -31,6 +31,8 @@ RUN set -ex \
         pyopenssl \
         requests[security] \
         youtube-dl \
+ && git clone https://github.com/Prior99/mopidy-subidy.git \
+ && cd mopidy-subidy && python setup.py install && cd .. \
  && mkdir -p /var/lib/mopidy/.config/mopidy \
  && ln -s /config/ /var/lib/mopidy/.config/mopidy \
     # Clean-up
