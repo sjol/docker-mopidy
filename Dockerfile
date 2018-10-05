@@ -21,6 +21,7 @@ RUN set -ex \
         mopidy-soundcloud \
         mopidy-spotify
 RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - \
+ && apt-get install libxml2-dev libxslt1-dev \
  && pip install -U six \
  && pip install \
         Mopidy-Moped \
