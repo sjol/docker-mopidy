@@ -21,7 +21,7 @@ RUN set -ex \
         mopidy-soundcloud \
         mopidy-spotify
 RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - \
- && apt-get install -y libxml2-dev libxslt1-dev python-dev libssl-dev \
+ && apt-get install -y libxml2-dev libxslt1-dev python-dev libssl-dev git \
  && pip install -U six \
  && export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/" \
  && pip install \
