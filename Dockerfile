@@ -32,6 +32,7 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - \
         requests[security] \
         requests \
         youtube-dl \
+        py-sonic==0.6.2 \
  && git clone https://github.com/Prior99/mopidy-subidy.git \
  && cd mopidy-subidy && python setup.py install && cd .. \
  && mkdir -p /var/lib/mopidy/.config/mopidy \
