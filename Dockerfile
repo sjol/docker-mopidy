@@ -30,7 +30,7 @@ RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - \
         pyasn1 \
         pyopenssl \
         requests[security] \
-        urllib \
+        urllib2 \
         requests \
         youtube-dl \
  && git clone https://github.com/Prior99/mopidy-subidy.git \
