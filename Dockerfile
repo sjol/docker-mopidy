@@ -23,6 +23,7 @@ RUN set -ex \
 RUN curl -L https://bootstrap.pypa.io/get-pip.py | python - \
  && apt-get install -y libxml2-dev libxslt1-dev \
  && pip install -U six \
+ && export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/" \
  && pip install \
         Mopidy-Moped \
         Mopidy-GMusic \
